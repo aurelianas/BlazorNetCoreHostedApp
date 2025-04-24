@@ -9,7 +9,7 @@ builder.Services.AddCors(options =>
 {
 	options.AddDefaultPolicy(policy =>
 	{
-		policy.WithOrigins("https://blazornetcorehostedappserver.azurewebsites.net/")
+		policy.WithOrigins("https://blazornetcorehostedappserver.azurewebsites.net")
 			  .AllowAnyMethod()
 			  .AllowAnyHeader();
 	});

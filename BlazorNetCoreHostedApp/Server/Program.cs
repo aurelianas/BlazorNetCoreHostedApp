@@ -5,6 +5,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
+builder.Services.AddCors(policy =>
+{
+	policy.AddPolicy("_myAllowSpecificOrigins", builder =>
+	 builder.WithOrigins("https://blazornetcorehostedappserver.azurewebsites.net/")
+	  .SetIsOriginAllowed((host) => true) // this for using localhost address
+	  .AllowAnyMethod()
+	  .AllowAnyHeader()
+	  .AllowCredentials());
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,6 +28,7 @@ else
 	app.UseHsts();
 }
 
+app.UseCors("_myAllowSpecificOrigins");
 app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();

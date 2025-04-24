@@ -18,7 +18,7 @@ public partial class Products
 	{
 		//ProductList = await HttpClient.GetFromJsonAsync<List<Product>>("sample-data/product.json");
 		//var baseUri = NavigationManager.BaseUri;
-		//var http = HttpClientFactory.CreateClient("BlazorNetCoreHostedApp.ServerAPI");
-		ProductList = await HttpClient.GetFromJsonAsync<List<Product>>($"api/products");
+		var http = HttpClientFactory.CreateClient("BlazorNetCoreHostedApp.ServerAPI");
+		ProductList = await http.GetFromJsonAsync<List<Product>>($"api/products");
 	}
 }

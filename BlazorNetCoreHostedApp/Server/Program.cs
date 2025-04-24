@@ -5,14 +5,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-builder.Services.AddCors(policy =>
+builder.Services.AddCors(options =>
 {
-	policy.AddPolicy("_myAllowSpecificOrigins", builder =>
-	 builder.WithOrigins("https://blazornetcorehostedappserver.azurewebsites.net/")
-	  .SetIsOriginAllowed((host) => true) // this for using localhost address
-	  .AllowAnyMethod()
-	  .AllowAnyHeader()
-	  .AllowCredentials());
+	options.AddDefaultPolicy(policy =>
+	{
+		policy.WithOrigins("https://blazornetcorehostedappserver.azurewebsites.net/")
+			  .AllowAnyMethod()
+			  .AllowAnyHeader();
+	});
 });
 
 var app = builder.Build();
@@ -28,7 +28,7 @@ else
 	app.UseHsts();
 }
 
-app.UseCors("_myAllowSpecificOrigins");
+app.UseCors();
 app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();

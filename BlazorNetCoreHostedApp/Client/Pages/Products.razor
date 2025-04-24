@@ -1,0 +1,11 @@
+﻿@page "/products"
+
+<PageTitle>Products</PageTitle>
+
+<h1>Products</h1>
+
+
+@foreach(var prod in ProductList)
+{
+	<p>@prod.Id -- @prod.Name -- @prod.Description -- @prod.ImagePath -- @prod.Price</p>
+}

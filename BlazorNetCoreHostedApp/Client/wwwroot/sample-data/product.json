@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Image1",
+    "description": "This is just the description of the image",
+    "imagePath": "https://fastly.picsum.photos/id/421/536/354.jpg?hmac=ABcHz8juYL1Ki6k7Xino-2C3a18LW8Cs29TONdo5vlA",
+    "price": 150
+  },
+  {
+    "id": 2,
+    "name": "Image2",
+    "description": "This is just the description of the image",
+    "imagePath": "https://placehold.co/600x400/jpg",
+    "price": 120.30
+  },
+  {
+    "id": 3,
+    "name": "Image3",
+    "description": "This is just the description of the image",
+    "imagePath": "https://placehold.co/1200x700/jpg",
+    "price": 210.50
+  },
+  {
+    "id": 4,
+    "name": "Image4",
+    "description": "This is just the description of the image",
+    "imagePath": "https://placehold.co/600x400/jpg",
+    "price": 100
+  },
+  {
+    "id": 5,
+    "name": "Image5",
+    "description": "This is just the description of the image",
+    "imagePath": "https://placehold.co/600x400/jpg",
+    "price": 75
+  },
+  {
+    "id": 6,
+    "name": "Image6",
+    "description": "This is just the description of the image",
+    "imagePath": "https://placehold.co/600x400/jpg",
+    "price": 325.99
+  },
+  {
+    "id": 7,
+    "name": "Image7",
+    "description": "This is just the description of the image",
+    "imagePath": "https://placehold.co/600x400/jpg",
+    "price": 325.99
+  },
+  {
+    "id": 8,
+    "name": "Image8",
+    "description": "This is just the description of the image",
+    "imagePath": "https://placehold.co/600x400/jpg",
+    "price": 325.99
+  },
+  {
+    "id": 9,
+    "name": "Image9",
+    "description": "This is just the description of the image",
+    "imagePath": "https://placehold.co/600x400/jpg",
+    "price": 325.99
+  },
+  {
+    "id": 10,
+    "name": "Image10",
+    "description": "This is just the description of the image edited from github",
+    "imagePath": "https://placehold.co/600x400/jpg",
+    "price": 325.99
+  }
+]
